@@ -1,0 +1,179 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2{
+    text-align: center;
+}
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    background-image: url(https://o289.github.io/BlackBoard/img/BB.jpg);
+    background-color: #164b23;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 100vh;
+}
+form{
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+/* ここからsettingに関するスタイル */
+#setting{
+    display: flex;
+}
+#setting.No_setting{
+    display: none;
+}
+#plus{
+    /* 重なり順 */
+    position: relative;
+    z-index: 2; 
+    left: 20%;
+    /* 大きさ */
+    width: 64px;
+    height: 64px;
+    /* 丸 */
+    border: 3px solid #fff;
+    border-radius: 50%;
+    /*  */
+    opacity: 1;
+}
+#plus.display{
+    transform: rotateZ(45deg);
+}
+#plus.none{
+    opacity: 0;
+}
+#deletion{
+    color: #fff;
+    /*  */
+    margin: 0 40%;
+    border: 3px solid #fff;
+    padding: 12px 30px;
+    /*  */
+    font-size: 1.3rem;
+    font-weight: 600;
+    /*  */
+    opacity: 1;
+}
+#deletion.none{
+    opacity: 0;
+}
+.size,
+.weight{
+    margin-top: 10%;
+}
+.change{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8% auto;
+}
+.button{
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    padding-top: 10px;
+    border: 2px solid #000000;
+}
+#setting_display{
+    /*  */
+    background-color: rgb(255, 255, 255 , 0.5);
+    /*  */
+    display: none;
+    /*  */
+    width: 50vw;
+    height: 100vh;
+    
+}
+#setting_display.display{
+    display: block;
+    /*  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*  */
+    z-index: 3;
+}
+#config{
+    display: block;
+    position: relative;
+    right: 20%;
+}
+#config.display{
+    display: block;
+}
+/* ここまで */
+/* ここから黒板に関するスタイル */
+#black_board{
+    display: block;
+}
+#black_board.display{
+    display: none;
+}
+#ul{
+    /* 表示方式 */
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: flex-start;  
+    /* 余白 */
+    margin-top: 30px;
+    /* 初期フォント */
+    font-size: 36px;
+    font-weight: 600;
+}
+.opinion{
+    color: #fff;
+    /* 縦書きにする */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    /*  */
+    margin: 20px;
+    /*  */
+    cursor: pointer;
+}
+/* ここまで */
+/* ここからテキスト追加画面のスタイル */
+#add_display{
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100%;
+}
+#add_display.display{
+    background-color: rgb(255, 255, 255, 0.5);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.inputText{
+    margin: 8% auto;
+}
+.form_title{
+    color: #105800;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+}
+input[type="text"]:focus{
+    border: 0;
+    outline: 2px dashed #105800;
+}
+#text{
+    width: 80%;
+    padding: 10px 0;
+    margin: 5% auto;
+}
+/* ここまで */

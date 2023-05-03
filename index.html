@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoard</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600;900&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="https://o289.github.io/BlackBoard/style.css">
+    <script>
+        // フォントサイズの変更
+        function font_size(size){
+            const ul = document.getElementById('ul')
+            ul.style.fontSize = size + "px"
+        }
+        function font_weight(weight){
+            const ul = document.getElementById('ul')
+            ul.style.fontWeight = weight;
+        };
+    </script>
+</head>
+<body>
+    <div id="setting">
+        <img src="https://o289.github.io/BlackBoard/img/plus.png" alt="add" id="plus">
+        <div id="deletion">削除</div>
+        <img src="https://o289.github.io/BlackBoard/img/setting.png" alt="setting_button" id="config">
+        <div id="setting_display">
+            <div class="size">
+                <h2>大きさ</h2> 
+                <div class="change">
+                    <button onclick="font_size(24)" class="button">小</button>
+                    <button onclick="font_size(36)" class="button">中</button>
+                    <button onclick="font_size(48)" class="button">大</button>
+                </div>
+            </div>
+            <div class="weight">
+                <h2>太さ</h2>
+                <div class="change">
+                    <button onclick="font_weight(300)" class="button">細</button>
+                    <button onclick="font_weight(600)" class="button">中</button>
+                    <button onclick="font_weight(900)" class="button">太</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="black_board">
+        <ul id="ul"></ul>
+    </div>
+    <div id="add_display">
+        <div class="inputText">
+            <h2 class="form_title">addOpinion</h2>
+            <form id="form">
+                <input type="text" id="text">
+            </form>
+        </div>
+    </div>
+    <script src="https://o289.github.io/BlackBoard/index.js"></script>
+</body>
+</html>
